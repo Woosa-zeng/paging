@@ -1,0 +1,48 @@
+/*page start*/
+ul{
+  padding-left: 0;
+}
+.page{
+  margin-left:auto;
+  margin-right:auto;
+}
+.page ul,.page li{
+  display:inline-block;
+  display:inline\9;
+  zoom:1;
+}
+.page a{
+  display:inline-block;
+  *display:inline;
+  *zoom:1;
+  margin-right:4px;
+  border:1px solid #cddfec;
+  padding:0 8px;
+  padding:3px 8px 2px;
+  color:#414141;
+  background:#ecf3f8;
+}
+.page a.on{
+  background:#0076b1;
+  color:#fff;
+}
+.page a.on:hover{
+  background:#0076b1;
+  color:#fff;
+  border:1px solid #cddfec;
+}
+.page a:hover{
+  border:1px solid #1ba0e3;
+  color:#0093dd;
+  text-decoration:none;
+}
+.page-input{
+  border:1px solid #cddfec;
+  width:40px;
+  text-align:center;
+  height:22px;
+  line-height:22px;
+  background:#ecf3f8;
+  margin:0 5px;
+}
+/*page end*/

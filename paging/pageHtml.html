@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>paging</title>
+  <link href="./page.css" rel="stylesheet" type="text/css"/>
+  <style>
+    input{
+      width: 30px;
+    }
+  </style>
+</head>
+<body>
+<div class="mt20 ml20 mr20 black1 clearfix">
+  <div class="tab_box">
+    <div class="table2-text">
+      <div>
+        <p class="bt-bot-line f-yahei f13 fw blue2 mt10">所有数据</p>
+        <table width="100%" border="0" class="table1 bb-table" >
+          <thead>
+          <tr align="center">
+            <th scope="col" width="3%">编号</th>
+            <th scope="col" width="8%">所属门店</th>
+            <th scope="col" width="8%">设备类型</th>
+            <th scope="col" width="8%">总数</th>
+            <th scope="col" >时间范围</th>
+            <th scope="col" width="8%">在线数</th>
+            <th scope="col" width="8%">在线率</th>
+            <th scope="col" width="8%">不定位数</th>
+            <th scope="col" width="8%">不定位率</th>
+            <th scope="col" width="8%">未激活数</th>
+            <th scope="col" width="8%">未激活率</th>
+          </tr>
+          </thead>
+          <tbody id="showAllDate">
+          </tbody>
+        </table>
+        <!-- Start page -->
+        <div class="page t-c mt20  fl widthfull" id="page1">
+          <!-- 分页隐藏数据开始 -->
+          <input type="text" name="totalCount" class="totalCount" value="" width="20px"/>
+          <input type="text" name="currPage" class="currPage" value="" width="20px"/>
+          <input type="text" name="pageSize"class="pageSize" value="" width="20px"/>
+          <!-- 分页隐藏数据结束 -->
+          <a href="javascript:void(0);" class="homePage">首页</a>
+          <a href="javascript:void(0);" class="prePage">上一页</a>
+          <ul class="pageNumDiv"></ul>
+          <a href="javascript:void(0);"  class="nextPage" >下一页</a>
+          <a href="javascript:void(0);" class="endPage">末页</a>
+          <span class="ml10">跳转到第<input type="text" maxlength="2" class="page-input goPageNum" />页</span>
+          <span class="ml25">[共<span class="totalPageNum"></span>页]</span>
+        </div>
+        <!--End page-->
+      </div>
+      <div>
+        <p class="bt-bot-line f-yahei f13 fw blue2 mt10">所有数据</p>
+        <table width="100%" border="0" class="table1 bb-table" >
+          <thead>
+          <tr align="center">
+            <th scope="col" width="3%">编号</th>
+            <th scope="col" width="8%">所属门店</th>
+            <th scope="col" width="8%">设备类型</th>
+            <th scope="col" width="8%">总数</th>
+            <th scope="col" >时间范围</th>
+            <th scope="col" width="8%">在线数</th>
+            <th scope="col" width="8%">在线率</th>
+            <th scope="col" width="8%">不定位数</th>
+            <th scope="col" width="8%">不定位率</th>
+            <th scope="col" width="8%">未激活数</th>
+            <th scope="col" width="8%">未激活率</th>
+          </tr>
+          </thead>
+          <tbody id="showAllDate2">
+          </tbody>
+        </table>
+        <!-- Start page -->
+        <div class="page t-c mt20  fl widthfull" id="page2">
+          <!-- 分页隐藏数据开始 -->
+          <input type="text" name="totalCount" class="totalCount" value="" width="20px"/>
+          <input type="text" name="currPage" class="currPage" value="" width="20px"/>
+          <input type="text" name="pageSize"class="pageSize" value="" width="20px"/>
+          <!-- 分页隐藏数据结束 -->
+          <a href="javascript:void(0);" class="homePage">首页</a>
+          <a href="javascript:void(0);" class="prePage">上一页</a>
+          <ul class="pageNumDiv"></ul>
+          <a href="javascript:void(0);"  class="nextPage" >下一页</a>
+          <a href="javascript:void(0);" class="endPage">末页</a>
+          <span class="ml10">跳转到第<input type="text" maxlength="2" class="page-input goPageNum" />页</span>
+          <span class="ml25">[共<span class="totalPageNum"></span>页]</span>
+        </div>
+        <!--End page-->
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="ajaxPage.js" type="text/javascript"></script>
+<script>
+  $(function(){
+    var parentId = 'page1';
+    var showTotalPageing =  new SetPaging(5,22,1,parentId);
+    var parentId2 = 'page2';
+    var showpage2 =  new SetPaging(3,10,1,parentId2);
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
